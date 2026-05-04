@@ -1,28 +1,103 @@
-# EventHub - Assignment 1
+# EventHub - Assignment 2
 
 ## Team Members
-* **Constanza Campos**
-* **René Montoya**
 
-**Course:** Web Technologies  
-**Year:** 2026
+* Constanza Campos
+* René Montoya
+
+## Course
+
+Web Technologies
+
+## Year
+
+2026
+
+---
+
+## Setup and Running Instructions
+
+To run this application locally using PostgreSQL, follow these steps in your terminal:
+
+### 1. Install dependencies
+
+```bash
+bundle install
+```
+
+### 2. Setup the database (create, migrate, and seed)
+
+```bash
+rails db:create db:migrate db:seed
+```
+
+### 3. Start the Rails server
+
+```bash
+rails server
+```
+
+Then, open your browser and navigate to:
+
+```
+http://localhost:3000
+```
 
 ---
 
 ## Repository Structure
 
-The project follows the standard **Ruby on Rails 8** structure, with the main delivery components organized as follows:
+The project follows the standard Ruby on Rails 8 structure:
 
-* **Landing Page:** * Static file (Assignment 1 requirement): `index.html`
-  * View: `app/views/pages/home.html.erb`
-  * Layout: `app/views/layouts/application.html.erb` 
-  * Controller: `app/controllers/pages_controller.rb`
-* **User Stories:** Located in the `user_stories.md` file.
-* **Data Model:** The entity-relationship diagram can be found in `diagram.png`.
-* **Routes:** Configured in `config/routes.rb` to set the landing page as the root.
+### Models & Validations
+
+Located in `app/models/`
+Includes associations and enums for:
+
+* Event
+* User
+* Registration
+* Category
+
+### Controllers & Views
+
+* Read-only actions (`index`, `show`) located in `app/controllers/`
+* Bootstrap-styled views located in `app/views/`
+
+### Database Seeds
+
+Meaningful sample data located in:
+
+```
+db/seeds.rb
+```
+
+### Landing Page
+
+* View: `app/views/pages/home.html.erb`
+* Layout: `app/views/layouts/application.html.erb`
+* Controller: `app/controllers/pages_controller.rb`
+
+### User Stories
+
+Located in:
+
+```
+user_stories.md
+```
+
+### Routes
+
+Configured in:
+
+```
+config/routes.rb
+```
+
+Using resourceful routes for main entities.
 
 ---
 
 ## Database Diagram
 
-![Data Model](.Untitled.png)
+![Database Diagram](https://raw.githubusercontent.com/conicampos/Assignment1/main/data_model_v2.png)
